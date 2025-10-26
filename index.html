@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONETAG FINAL STEALTH RUNNER</title>
+  <script>
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    
+    // Function to perform the link loop
+    function executeLoop() {
+      var links = [
+        // MONETAG SMART LINK MULTIPLE TIMES
+        'https://otieu.com/4/10091353', 
+        'https://otieu.com/4/10091353', 
+        'https://otieu.com/4/10091353', 
+        'https://otieu.com/4/10091353', 
+        'https://otieu.com/4/10091353', 
+        'https://otieu.com/4/10091353', 
+      ];
+      
+      shuffleArray(links);
+      var currentIndex = 0;
+      function openLink() {
+        var link = links[currentIndex];
+        openModalWithLink(link);
+        
+        var interval = Math.floor(Math.random() * (30000 - 20000 + 1) + 20000); // 20-30 seconds
+        
+        setTimeout(function () {
+          closeModal();
+          currentIndex = (currentIndex + 1) % links.length;
+          openLink();
+        }, interval);
+      }
+      openLink();
+    }
+    
+    // Function to open the modal with a given link
+    function openModalWithLink(link) {
+      document.getElementById('modalIframe').src = link;
+      document.getElementById('modalIframe').onload = function () {
+        document.getElementById('myModal').style.display = 'block';
+      };
+    }
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+    
+    window.onload = function () {
+      executeLoop(); 
+    };
+  </script>
+</head>
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <iframe id="modalIframe" src="" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+</html>
