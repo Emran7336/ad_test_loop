@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSTERRA LOOP ACTIVE (10 SEC)</title>
+    
+    <style>
+        body { 
+            /* Background/Foreground Styling */
+            background-color: #1a1a1a; 
+            color: white; 
+            
+            /* Centering Content */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            
+            /* Font and Layout */
+            font-family: Arial, sans-serif; 
+            flex-direction: column; 
+            text-align: center; /* Text ko center karne ke liye */
+        }
+        h1 { 
+            font-size: 24px; 
+            color: #f39c12; 
+        }
+        p {
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>🚀 ADSTERRA LOOP ACTIVE 🔄</h1>
+    <p>Please wait 10 seconds. The page will refresh to load the next popunder.</p>
+
+    <script type="text/javascript" src="https://www.effectivegatecpm.com/hbzg7zja4?key=1408195716bc13ad66ce5bea93856139"></script>
+
+    <script>
+        // FUNCTION: Jo har 10 second mein page ko refresh karega.
+        function startPopunderLoop() {
+            console.log("Page will reload in 10 seconds to generate the next Popunder.");
+            
+            // 10 second (10000 milliseconds) ke baad page ko force-reload karega
+            setTimeout(function() {
+                // 'true' force reload ke liye hai, taaki cache use na ho
+                window.location.reload(true); 
+            }, 10000); 
+        }
+
+        // Jab poora page load ho jaye, to loop chalu karo.
+        window.onload = startPopunderLoop; 
+    </script>
+    
+</body>
+</html>
