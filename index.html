@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONETAG STEALTH iFRAME LOOP (20 SEC)</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif; flex-direction: column; }
+        h1 { font-size: 24px; color: #3498db; }
+        /* iFrame ko screen se bilkul chhipaane ke liye */
+        #stealth-iframe { position: absolute; left: -9999px; width: 1px; height: 1px; }
+    </style>
+</head>
+<body>
+    <h1> stealth MONETAG LOOP ACTIVE  stealth 🔄</h1>
+    <div style="color: #2ecc71; font-size: 20px;">
+        <p>iFrame Refreshing in: <span id="timerDisplay">20</span> seconds...</p>
+    </div>
+    <p style="margin-top: 50px; font-size: 14px; color: #e74c3c;">DO NOT CLOSE THE BROWSER.</p>
+
+    <iframe id="stealth-iframe" src="about:blank"></iframe>
+
+    <script>
+    // ===============================================
+    // 1. Aapki Monetag Direct Link
+    // ===============================================
+    var smartLink = "https://otieu.com/4/10091353";
+    var rotationInterval = 20000; // 20 seconds (20000ms)
+
+    var iframe = document.getElementById('stealth-iframe');
+    
+    // Function to load Smart Link in iFrame
+    function loadIframe() {
+        // iFrame ko naye source se load karne par, Monetag isko naya Impression maanta hai.
+        iframe.src = smartLink;
+        console.log("iFrame refreshed with Monetag link.");
+    }
+    
+    // Start the automatic refresh loop
+    setInterval(loadIframe, rotationInterval);
+
+    // Initial load
+    loadIframe();
+    
+    // Timer display for the user
+    var countdown = rotationInterval / 1000;
+    var timerDisplay = document.getElementById('timerDisplay');
+    
+    function updateTimer() {
+        countdown--;
+        timerDisplay.textContent = countdown;
+        if (countdown <= 0) {
+            countdown = rotationInterval / 1000;
+        }
+    }
+    setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
