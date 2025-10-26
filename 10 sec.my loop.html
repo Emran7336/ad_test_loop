@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL TIER-1 LOOP (10 SEC)</title>
+    <meta http-equiv="refresh" content="10;url=javascript:startRedirectLoop()">
+    
+    <style>
+        body { background-color: #1a1a1a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif; flex-direction: column; }
+        h1 { font-size: 24px; color: #f39c12; }
+    </style>
+</head>
+<body>
+    <h1>🚀 ADSTERRA LOOP ACTIVE 🔄</h1>
+    <div style="color: #2ecc71; font-size: 20px;">
+        <p>Redirecting in: <span id="timerDisplay">10</span> seconds...</p>
+    </div>
+    <p style="margin-top: 50px; font-size: 14px; color: #e74c3c;">DO NOT CLOSE THE BROWSER.</p>
+
+    <script>
+    // ===============================================
+    // 1. Aapki Smart Link
+    // ===============================================
+    var smartLink = "https://www.effectivegatecpm.com/hbzg7zja4?key=1408195716bc13ad66ce5bea93856139";
+    
+    var rotationInterval = 10000; // 10 seconds (10000ms)
+
+    window.startRedirectLoop = function() {
+        // Simple redirect: poora page smart link par bhej deta hai
+        window.location.replace(smartLink);
+    }
+    
+    var countdown = rotationInterval / 1000;
+    var timerDisplay = document.getElementById('timerDisplay');
+    
+    function updateTimer() {
+        countdown--;
+        timerDisplay.textContent = countdown;
+        if (countdown <= 0) {
+            countdown = rotationInterval / 1000;
+        }
+    }
+    setInterval(updateTimer, 1000);
+    
+    // Pehla redirect <meta> tag se hi ho jaayega
+    </script>
+</body>
+</html>
